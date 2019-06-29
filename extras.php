@@ -83,12 +83,23 @@ function NexoReceiver($message) {
 
   // Validate the received hmac against the computed hmac
   $computed_hmac = NexoHMac($decrypted, $keymaterial);
+  echo "<br/><br/> Hmac <br/>";
+  echo $hmac;
+  echo "<br/><br/> computed_hmac <br/>";
+  echo $computed_hmac;
   if ($computed_hmac != $hmac) {
     return null;
   }
 
   // Make sure the plaintext header and the header in the decrypted message match
   $decrypted_json = json_decode($decrypted, true);
+  
+  echo "<br/><br/> Decrypted Json <br/>";
+  echo $decrypted_json[$bodykey]['MessageHeader'];
+  
+  echo "<br/><br/> Header <br/>";
+  echo $header;
+  
   if ($decrypted_json[$bodykey]['MessageHeader'] !== $header) {
     return null;
   }
