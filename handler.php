@@ -92,8 +92,8 @@
 
   if (!empty($encyption) && $encyption == "y"){
 
-    $keymaterial = NexoDeriveKeyMaterial("mysupersecretpassphrase");
-    $outmessage = NexoSender($Data, 'mykey', 0, $keymaterial);
+    $keymaterial = NexoDeriveKeyMaterial("AptosAdyenDev1");
+    $outmessage = NexoSender($Data, 'AdyenDev1', 0, $keymaterial);
     echo '<b>Encrypted Request::</b> <br/>'._format_json($outmessage,true);
     echo "<br/><br/><br/>";
   }
