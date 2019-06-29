@@ -8,7 +8,7 @@
 
 
 	
-	$apiKey = "API KEY";
+	$apiKey = "AQEuhmfxKovIaxdBw0m/n3Q5qf3VaZtZAoBrW2ZZ03a/+hmO1VZ6+ARkXKHKgjaxGxDBXVsNvuR83LVYjEgiTGAH-GQBnOBJEwOl9oAUToJm2dGuUeqNwKcocoObSkGlM0UE=-6Va4fjX35DAmJJzx";
 	$cloudURL = "https://terminal-api-test.adyen.com/sync";
 	
 	$localIP = 'https://192.168.14.119:8443/nexo/';	
@@ -20,9 +20,9 @@
 	$randomString = substr(str_shuffle(md5(time())),0,$length);
 
 	$ServiceID = date("dm").$randomString;  
-	$SaleID = "Ray";
+	$SaleID = "Spatel_TAPI";
 
-	$POIID= "P400Plus-275040713";//"V400m-324687828";
+	$POIID= "V400m-324688940";//"V400m-324687828";
 	$TimeStamp = date("Y-m-d\TH:i:s");
 
 
