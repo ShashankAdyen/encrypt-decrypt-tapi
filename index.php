@@ -18,7 +18,8 @@
 	
 	$length = 5;
 	$randomString = substr(str_shuffle(md5(time())),0,$length);
-
+	
+	$MessageCategory= "Payment";
 	$ServiceID = date("dm").$randomString;  
 	$SaleID = "Spatel_TAPI";
 
