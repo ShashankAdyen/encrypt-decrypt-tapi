@@ -87,9 +87,9 @@ function NexoReceiver($message) {
   echo $hmac;
   echo "<br/><br/> computed_hmac <br/>";
   echo $computed_hmac;
-  if ($computed_hmac != $hmac) {
-    return null;
-  }
+  //if ($computed_hmac != $hmac) {
+  //  return null;
+  //}
 
   // Make sure the plaintext header and the header in the decrypted message match
   $decrypted_json = json_decode($decrypted, true);
