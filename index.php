@@ -70,6 +70,8 @@
 	<br/>
 	<label>TransactionID</label>
 	<input type="text" name="TransactionID" value="<?= $TransactionID ?>"/><br/>
+	<label>MessageCategory</label>
+	<input type="text" name="MessageCategory" value="<?= $MessageCategory ?>"/><br/>
 	<label>ServiceID</label>
 	<input type="text" name="ServiceID" value="<?= $ServiceID ?>"/><br/>
 	<label>SaleID</label>
