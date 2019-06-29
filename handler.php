@@ -16,7 +16,7 @@
 
 
   $TransactionID = $_POST["TransactionID"];
-  $MessageCategory= $_POST["Payment"];
+  $MessageCategory= $_POST["MessageCategory"];
   $ServiceID = $_POST["ServiceID"];
   $SaleID = $_POST["SaleID"];
 
