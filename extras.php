@@ -103,6 +103,9 @@ function NexoReceiver($message) {
   //if ($decrypted_json[$bodykey]['MessageHeader'] !== $header) {
   //  return null;
   //}
+  echo "<br/><br/> Decrypt <br/>";
+  echo $decrypted;
+  
   return $decrypted;
 }
 function NexoDecrypt($message, $keymaterial, $nonce) {
