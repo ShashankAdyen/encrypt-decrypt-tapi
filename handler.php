@@ -125,6 +125,11 @@
     echo "<br/><br/><br/>";
     if (!empty($encyption) && $encyption == "y"){
       $message = NexoReceiver($body);
+      echo "<br/><br/> MessageData <br/>";
+      echo $message;
+      echo "<br/><br/> BodyData <br/>";
+      echo $body;
+      echo "<br/><br/><br/>";
       echo '<b>Unencrypted Response:    </b><br/>' . _format_json($message,true);
     }
 
