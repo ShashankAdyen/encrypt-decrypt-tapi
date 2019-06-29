@@ -15,7 +15,8 @@
   $localIP = $_POST["localIP"];
 
 
-  $TransactionID = $_POST["TransactionID"]; 
+  $TransactionID = $_POST["TransactionID"];
+  $MessageCategory= $_POST["Payment"];
   $ServiceID = $_POST["ServiceID"];
   $SaleID = $_POST["SaleID"];
 
@@ -59,7 +60,7 @@
           "MessageHeader": {
             "ProtocolVersion":"3.0",
             "MessageClass":"Service",
-            "MessageCategory":"Payment",
+            "MessageCategory":"'.$MessageCategory.'",
             "MessageType":"Request",
             "ServiceID":"'.$ServiceID.'",
             "SaleID":"'.$SaleID.'",
