@@ -69,7 +69,7 @@
 	<br/>
 	<label>*LocalIP</label>
 	<input type="text" name="localIP" value="<?= $localIP ?>"/><br/>
-	<div style=" font-size:  12;padding-left:  16px;">
+	<div style=" font-size:  15;padding-left:  16px;">
 	Encrypted:
 		<label>Yes</label>
 		<input type="radio" name="ENC" value ="y">
@@ -79,7 +79,7 @@
 
 	<label>*CloudURL</label>
 	<input type="text" name="cloudURL" value="<?= $cloudURL ?>"/><br/>
-	<div style=" font-size:  12;padding-left:  16px;">
+	<div style=" font-size:  15;padding-left:  16px;">
 		<label>API Key</label>
 		<input type="text" name="apiKey" value = "<?= $apiKey ?>"/><br/>
 	</div>
