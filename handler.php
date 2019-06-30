@@ -98,6 +98,9 @@
   if (!empty($encyption) && $encyption == "y"){
 
     $keymaterial = NexoDeriveKeyMaterial($passPharase, $salt);
+    echo '<b>key material::</b> <br/>';
+    echo $keymaterial;
+    
     $outmessage = NexoSender($Data, $keyIdentifier, 0, $keymaterial);
     
     echo '<b>Encrypted Request::</b> <br/>'._format_json($outmessage,true);
