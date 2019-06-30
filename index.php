@@ -8,7 +8,7 @@
 
 	$passPhrase="AptosAdyenDev1";
 	$keyIdentifier="AdyenDev1";
-	$salt="AdyenNexoV1Salt",
+	$salt="AdyenNexoV1Salt";
 	
 	$apiKey = "AQEuhmfxKovIaxdBw0m/n3Q5qf3VaZtZAoBrW2ZZ03a/+hmO1VZ6+ARkXKHKgjaxGxDBXVsNvuR83LVYjEgiTGAH-GQBnOBJEwOl9oAUToJm2dGuUeqNwKcocoObSkGlM0UE=-6Va4fjX35DAmJJzx";
 	$cloudURL = "https://terminal-api-test.adyen.com/sync";
