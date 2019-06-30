@@ -69,6 +69,10 @@ function NexoReceiver($message, $passPhrase, $salt) {
   $blob = $body['NexoBlob'];
   $header = $body['MessageHeader'];
   $trailer = $body['SecurityTrailer'];
+  
+  echo "<br/>";
+  echo $salt;
+  echo "<br/>";
 
   // Get the information from the SecurityTrailer
   if ($trailer['AdyenCryptoVersion'] != 1) {
