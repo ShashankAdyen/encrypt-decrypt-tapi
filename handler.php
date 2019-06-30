@@ -10,7 +10,7 @@
   header("Cache-Control: post-check=0, pre-check=0", false);
   header("Pragma: no-cache");
   
-  $passphrase= $_POST["passphrase"];
+  $passphrase= $_POST["passPhrase"];
   $keyIdentifier= $_POST["keyIdentifier"];
   
   $apiKey = $_POST["apiKey"];
