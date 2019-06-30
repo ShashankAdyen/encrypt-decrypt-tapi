@@ -1,9 +1,9 @@
 <?php
 
 
-function NexoDeriveKeymaterial($passphraseLocal) {
+function NexoDeriveKeymaterial($passphraseLocal,$salt) {
   $outlen = 80;
-  $salt =  "AdyenNexoV1Salt";
+  //$salt =  "AdyenNexoV1Salt";
   $rounds = 4000;
   $bytes = openssl_pbkdf2($passphraseLocal, $salt, $outlen, $rounds, "sha1");
 
