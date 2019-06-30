@@ -12,7 +12,6 @@
   
   $passphrase= $_POST["passPhrase"];
   $keyIdentifier= $_POST["keyIdentifier"];
-  //$salt= $_POST["salt"];
     
   $apiKey = $_POST["apiKey"];
   $cloudURL = $_POST["cloudURL"];
