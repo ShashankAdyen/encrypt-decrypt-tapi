@@ -58,7 +58,7 @@ function XorBytes($a, $b) {
   }
   return $r;
 }
-function NexoReceiver($message) {
+function NexoReceiver($message,$passphrase) {
   // Warning: almost all validation is missing!
   // Parse the incoming message and decompose it
   $jsonin = json_decode($message, true);
@@ -73,7 +73,7 @@ function NexoReceiver($message) {
   if ($trailer['AdyenCryptoVersion'] != 1) {
     return null;
   }
-  $keymaterial = NexoLookupKeybyIdAndVersion($trailer['KeyIdentifier'], $trailer['KeyVersion']);
+  $keymaterial = NexoLookupKeybyIdAndVersion($trailer['KeyIdentifier'], $trailer['KeyVersion'], $passphrase);
   $nonce = base64_decode($trailer['Nonce']);
   $hmac = base64_decode($trailer['Hmac']);
 
@@ -102,11 +102,11 @@ function NexoDecrypt($message, $keymaterial, $nonce) {
   return openssl_decrypt($message, "AES-256-CBC", $keymaterial['cipher_key'], OPENSSL_RAW_DATA, $realiv);
 }
 
-function NexoLookupKeybyIdAndVersion($keyid, $keyversion) {
+function NexoLookupKeybyIdAndVersion($keyid, $keyversion, $passphrase) {
   // Actually, this function should do a lookup based on key id and version.
   // But for demonstration purposes we just return the derived keymaterial for
   // the given test passphrase.
-  return NexoDeriveKeyMaterial("AptosAdyenDev1");
+  return NexoDeriveKeyMaterial($passphrase);
 }
 
 function _format_json($json, $html = false) {
