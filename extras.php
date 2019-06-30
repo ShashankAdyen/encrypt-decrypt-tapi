@@ -1,11 +1,11 @@
 <?php
 
 
-function NexoDeriveKeymaterial($passphrase) {
+function NexoDeriveKeymaterial($passphraseLocal) {
   $outlen = 80;
   $salt =  "AdyenNexoV1Salt";
   $rounds = 4000;
-  $bytes = openssl_pbkdf2($passphrase, $salt, $outlen, $rounds, "sha1");
+  $bytes = openssl_pbkdf2($passphraseLocal, $salt, $outlen, $rounds, "sha1");
 
   $hmac_key = substr($bytes, 0, 32);
   $cipher_key = substr($bytes, 32, 32);
@@ -58,7 +58,7 @@ function XorBytes($a, $b) {
   }
   return $r;
 }
-function NexoReceiver($message,$passphrase) {
+function NexoReceiver($message,$passPhrase) {
   // Warning: almost all validation is missing!
   // Parse the incoming message and decompose it
   $jsonin = json_decode($message, true);
@@ -73,7 +73,7 @@ function NexoReceiver($message,$passphrase) {
   if ($trailer['AdyenCryptoVersion'] != 1) {
     return null;
   }
-  $keymaterial = NexoLookupKeybyIdAndVersion($trailer['KeyIdentifier'], $trailer['KeyVersion'], $passphrase);
+  $keymaterial = NexoLookupKeybyIdAndVersion($trailer['KeyIdentifier'], $trailer['KeyVersion'], $passPhrase);
   $nonce = base64_decode($trailer['Nonce']);
   $hmac = base64_decode($trailer['Hmac']);
 
@@ -102,7 +102,7 @@ function NexoDecrypt($message, $keymaterial, $nonce) {
   return openssl_decrypt($message, "AES-256-CBC", $keymaterial['cipher_key'], OPENSSL_RAW_DATA, $realiv);
 }
 
-function NexoLookupKeybyIdAndVersion($keyid, $keyversion, $passphrase) {
+function NexoLookupKeybyIdAndVersion($keyid, $keyversion, $passPhrase) {
   // Actually, this function should do a lookup based on key id and version.
   // But for demonstration purposes we just return the derived keymaterial for
   // the given test passphrase.
