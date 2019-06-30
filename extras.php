@@ -59,7 +59,7 @@ function XorBytes($a, $b) {
   }
   return $r;
 }
-function NexoReceiver($message,$passPhrase, $salt) {
+function NexoReceiver($message, $passPhrase, $salt) {
   // Warning: almost all validation is missing!
   // Parse the incoming message and decompose it
   $jsonin = json_decode($message, true);
