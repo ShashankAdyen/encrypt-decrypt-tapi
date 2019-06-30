@@ -1,9 +1,9 @@
 <?php
 
 
-function NexoDeriveKeymaterial($passphraseLocal) {
+function NexoDeriveKeymaterial($passphraseLocal, $salt) {
   $outlen = 80;
-  $salt =  "AdyenNexoV1Salt"; 
+  //$salt =  "AdyenNexoV1Salt"; 
   //echo $saltLocal;
   $rounds = 4000;
   $bytes = openssl_pbkdf2($passphraseLocal, $salt, $outlen, $rounds, "sha1");
@@ -111,7 +111,7 @@ function NexoLookupKeybyIdAndVersion($keyid, $keyversion, $passPhrase, $salt) {
   // Actually, this function should do a lookup based on key id and version.
   // But for demonstration purposes we just return the derived keymaterial for
   // the given test passphrase.
-  return NexoDeriveKeyMaterial($passPhrase);
+  return NexoDeriveKeyMaterial($passPhrase, $salt);
 }
 
 function _format_json($json, $html = false) {
