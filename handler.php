@@ -98,6 +98,11 @@
 
     $keymaterial = NexoDeriveKeyMaterial("AptosAdyenDev1");
     $outmessage = NexoSender($Data, $keyIdentifier, 0, $keymaterial);
+   
+    echo "<br/><br/><br/>";
+    echo $keyIdentifier;
+    echo "<br/><br/><br/>";
+    
     echo '<b>Encrypted Request::</b> <br/>'._format_json($outmessage,true);
     echo "<br/><br/><br/>";
   }
