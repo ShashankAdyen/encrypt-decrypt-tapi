@@ -12,7 +12,8 @@
   
   $passphrase= $_POST["passPhrase"];
   $keyIdentifier= $_POST["keyIdentifier"];
-  
+  $salt= $_POST["salt"];
+    
   $apiKey = $_POST["apiKey"];
   $cloudURL = $_POST["cloudURL"];
   $localIP = $_POST["localIP"];
@@ -96,7 +97,7 @@
 
   if (!empty($encyption) && $encyption == "y"){
 
-    $keymaterial = NexoDeriveKeyMaterial("AptosAdyenDev1");
+    $keymaterial = NexoDeriveKeyMaterial($passPharase, $salt);
     $outmessage = NexoSender($Data, $keyIdentifier, 0, $keymaterial);
     
     echo '<b>Encrypted Request::</b> <br/>'._format_json($outmessage,true);
