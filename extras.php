@@ -1,7 +1,7 @@
 <?php
 
 
-function NexoDeriveKeymaterial($passphraseLocal,$saltLocal) {
+function NexoDeriveKeymaterial($passphraseLocal) {
   $outlen = 80;
   $salt =  "AdyenNexoV1Salt"; 
   echo $saltLocal;
@@ -59,7 +59,7 @@ function XorBytes($a, $b) {
   }
   return $r;
 }
-function NexoReceiver($message,$passPhrase, $salt) {
+function NexoReceiver($message, $passPhrase, $salt) {
   // Warning: almost all validation is missing!
   // Parse the incoming message and decompose it
   $jsonin = json_decode($message, true);
@@ -107,7 +107,7 @@ function NexoLookupKeybyIdAndVersion($keyid, $keyversion, $passPhrase, $salt) {
   // Actually, this function should do a lookup based on key id and version.
   // But for demonstration purposes we just return the derived keymaterial for
   // the given test passphrase.
-  return NexoDeriveKeyMaterial($passPhrase, $salt);
+  return NexoDeriveKeyMaterial($passPhrase);
 }
 
 function _format_json($json, $html = false) {
