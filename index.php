@@ -6,7 +6,8 @@
 
 	date_default_timezone_set('UTC');
 
-	$passphrase="AptosAdyenDev1";
+	$passPhrase="AptosAdyenDev1";
+	$keyIdentifier="AdyenDev1";
 	
 	$apiKey = "AQEuhmfxKovIaxdBw0m/n3Q5qf3VaZtZAoBrW2ZZ03a/+hmO1VZ6+ARkXKHKgjaxGxDBXVsNvuR83LVYjEgiTGAH-GQBnOBJEwOl9oAUToJm2dGuUeqNwKcocoObSkGlM0UE=-6Va4fjX35DAmJJzx";
 	$cloudURL = "https://terminal-api-test.adyen.com/sync";
@@ -45,14 +46,16 @@
 
 
 	<br/>
-	
 	<label>PassPhrase</label>
-	<input type="text" name="passphrase" value="<?= $passphrase ?>"/>
-	
+	<input type="text" name="passphrase" value="<?= $passPhrase ?>"/>
 	<br/>
 	
 	<br/>
+	<label>KeyIdentifier</label>
+	<input type="text" name="keyIdentifier" value="<?= $keyIdentifier ?>"/>
+	<br/>
 	
+	<br/>
 	<label>CloudAPI</label>
 	<input type="radio" name="CloudAPI" value ="y">
 	<label>LocalIP</label>
