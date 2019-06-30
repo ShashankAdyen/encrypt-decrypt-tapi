@@ -12,7 +12,7 @@
   
   $passphrase= $_POST["passPhrase"];
   $keyIdentifier= $_POST["keyIdentifier"];
-  $salt= $_POST["salt"];
+  //$salt= $_POST["salt"];
     
   $apiKey = $_POST["apiKey"];
   $cloudURL = $_POST["cloudURL"];
@@ -97,9 +97,9 @@
 
   if (!empty($encyption) && $encyption == "y"){
 
-    $keymaterial = NexoDeriveKeyMaterial($passPharase, $salt);
-    echo '<b>key material::</b> <br/>';
-    echo $keymaterial;
+    $keymaterial = NexoDeriveKeyMaterial($passPharase);
+    //echo '<b>key material::</b> <br/>';
+    //echo $keymaterial;
     
     $outmessage = NexoSender($Data, $keyIdentifier, 0, $keymaterial);
     
