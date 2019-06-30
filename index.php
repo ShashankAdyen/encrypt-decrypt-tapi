@@ -59,7 +59,7 @@
 	
 	<br/>
 	<label>Salt</label>
-	<input type="text" name="Salt" value="<?= $salt ?>"/>
+	<input type="text" name="salt" value="<?= $salt ?>"/>
 	<br/>
 	
 	<br/>
