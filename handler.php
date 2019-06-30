@@ -133,7 +133,7 @@
 
     echo "<br/><br/><br/>";
     if (!empty($encyption) && $encyption == "y"){
-      $message = NexoReceiver($body, $passPhrase);
+      $message = NexoReceiver($body, $passPhrase, $salt);
       echo '<b>Unencrypted Response:    </b><br/>' . _format_json($message,true);
     }
 
