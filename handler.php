@@ -11,6 +11,7 @@
   header("Pragma: no-cache");
   
   $passphrase= $_POST["passphrase"];
+  $keyIdentifier= $_POST["keyIdentifier"];
   
   $apiKey = $_POST["apiKey"];
   $cloudURL = $_POST["cloudURL"];
