@@ -10,7 +10,7 @@
   header("Cache-Control: post-check=0, pre-check=0", false);
   header("Pragma: no-cache");
   
-  $passphrase= $_POST["passPhrase"];
+  $passPhrase= $_POST["passPhrase"];
   $keyIdentifier= $_POST["keyIdentifier"];
     
   $apiKey = $_POST["apiKey"];
@@ -132,7 +132,7 @@
 
     echo "<br/><br/><br/>";
     if (!empty($encyption) && $encyption == "y"){
-      $message = NexoReceiver($body, $passphrase);
+      $message = NexoReceiver($body, $passPhrase);
       echo '<b>Unencrypted Response:    </b><br/>' . _format_json($message,true);
     }
 
