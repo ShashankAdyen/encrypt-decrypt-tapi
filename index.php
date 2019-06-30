@@ -109,7 +109,7 @@
 	<label>TransactionConditions</label>
 	<input type="text" name="TransactionConditions" value="<?= $TransactionConditions ?>"/><br/>
 	<br/>
-	<div style=" font-size:  10;padding-left:  16px;">
+	<div style=" font-size:  12;padding-left:  16px;">
 	options:<br/>
 	"ForceEntryMode": ["Keyed"]
 	</div>
@@ -118,10 +118,10 @@
 	<label>SaleToAcquirerData</label>
 	<input type="text" name="SaleToAcquirerData" value="<?= $SaleToAcquirerData ?>"/>
 	<br/>
-	<div style=" font-size:  10;padding-left:  16px;">
+	<div style=" font-size:  12;padding-left:  16px;">
 	options:(separate by &)<br/>
 	tenderOption=BypassPin<br/>
-    tenderOption=AllowPartialAuthorisation<br/>
+    	tenderOption=AllowPartialAuthorisation<br/>
 	tenderOption=AskGratuity<br/>
 	tenderOption=ForcedDecline<br/>
 	tenderOption=ReceiptHandler<br/>
