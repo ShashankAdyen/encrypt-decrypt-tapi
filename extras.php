@@ -107,7 +107,7 @@ function NexoLookupKeybyIdAndVersion($keyid, $keyversion, $passPhrase) {
   // Actually, this function should do a lookup based on key id and version.
   // But for demonstration purposes we just return the derived keymaterial for
   // the given test passphrase.
-  return NexoDeriveKeyMaterial($passPhrase);
+  return NexoDeriveKeyMaterial($passPhrase, $salt);
 }
 
 function _format_json($json, $html = false) {
