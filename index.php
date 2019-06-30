@@ -46,8 +46,8 @@
 
 	<br/>
 	
-	<label>passphrase</label>
-	<input type="text" name="passphrase" value="<?= $passphrase ?>"/><br/>
+	<label>PassPhrase</label>
+	<input type="text" name="passphrase" value="<?= $passphrase ?>"/>
 	
 	<label>CloudAPI</label>
 	<input type="radio" name="CloudAPI" value ="y">
