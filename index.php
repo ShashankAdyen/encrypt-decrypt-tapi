@@ -49,6 +49,10 @@
 	<label>PassPhrase</label>
 	<input type="text" name="passphrase" value="<?= $passphrase ?>"/>
 	
+	<br/>
+	
+	<br/>
+	
 	<label>CloudAPI</label>
 	<input type="radio" name="CloudAPI" value ="y">
 	<label>LocalIP</label>
