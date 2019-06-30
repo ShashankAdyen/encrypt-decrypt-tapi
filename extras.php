@@ -1,7 +1,7 @@
 <?php
 
 
-function NexoDeriveKeymaterial($passphraseLocal,$salt) {
+function NexoDeriveKeymaterial($passphraseLocal,$saltLocal) {
   $outlen = 80;
   $salt =  "AdyenNexoV1Salt"; 
   echo $saltLocal;
