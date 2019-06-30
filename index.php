@@ -47,7 +47,7 @@
 
 	<br/>
 	<label>PassPhrase</label>
-	<input type="text" name="passphrase" value="<?= $passPhrase ?>"/>
+	<input type="text" name="passPhrase" value="<?= $passPhrase ?>"/>
 	<br/>
 	
 	<br/>
