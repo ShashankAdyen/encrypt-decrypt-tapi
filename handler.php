@@ -96,7 +96,7 @@
 
   if (!empty($encyption) && $encyption == "y"){
 
-    $keymaterial = NexoDeriveKeyMaterial($passPharase);
+    $keymaterial = NexoDeriveKeyMaterial($passPhrase);
     //echo '<b>key material::</b> <br/>';
     //echo $keymaterial;
     
